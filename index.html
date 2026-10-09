@@ -11,11 +11,16 @@
      instead of the left-aligned reading layout the rest share. */
   body.home .page { text-align: center; }
   body.home .masthead { border-bottom: none; }
-  body.home .eyebrow { text-align: center; }
   body.home .meta-row { justify-content: center; }
   .crest { width: 140px; height: 140px; margin: 0 auto 24px; display: block; }
   .link-grid { max-width: 420px; margin-inline: auto; }
-  a.link-card { justify-content: center; }
+  a.link-card {
+    justify-content: center;
+    border-color: var(--accent);
+    background: var(--surface-2);
+    transition: box-shadow 0.15s ease, background 0.15s ease;
+  }
+  a.link-card:hover { box-shadow: 0 0 0 1px var(--accent); background: var(--surface); }
   a.link-card .arrow { display: none; }
 </style>
 </head>
@@ -24,7 +29,6 @@
   <img class="crest" src="wingman_crest.png" alt="Wingman crest">
 
   <div class="masthead">
-    <p class="eyebrow">Wingman</p>
     <h1 class="title">Wingman</h1>
     <div class="meta-row">
       <span>Coordinate safe, sober rides within your organization.</span>
