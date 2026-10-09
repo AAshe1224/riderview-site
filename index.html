@@ -5,9 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wingman</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Landing page only — the one page on this site that's a brand
+     moment rather than a document, so it gets centered treatment
+     instead of the left-aligned reading layout the rest share. */
+  body.home .page { text-align: center; }
+  body.home .masthead { border-bottom: none; }
+  body.home .eyebrow { text-align: center; }
+  body.home .meta-row { justify-content: center; }
+  .crest { width: 140px; height: 140px; margin: 0 auto 24px; display: block; }
+  .link-grid { max-width: 420px; margin-inline: auto; }
+  a.link-card { justify-content: center; }
+  a.link-card .arrow { display: none; }
+</style>
 </head>
-<body>
+<body class="home">
 <div class="page">
+  <img class="crest" src="wingman_crest.png" alt="Wingman crest">
+
   <div class="masthead">
     <p class="eyebrow">Wingman</p>
     <h1 class="title">Wingman</h1>
