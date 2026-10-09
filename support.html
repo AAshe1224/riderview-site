@@ -4,32 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wingman — Support</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 700px; margin: 40px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.65; }
-  h1 { font-size: 26px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
-  h2 { font-size: 18px; margin-top: 28px; }
-  a { color: #B8863F; }
-  .back { display: inline-block; margin-bottom: 24px; }
-  .q { font-weight: 600; margin-top: 16px; }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="back" href="index.html">← Back</a>
-<h1>Wingman Support</h1>
-<p>Need help with Wingman? Email us at <a href="mailto:riderview1901@gmail.com">riderview1901@gmail.com</a> and we'll get back to you as soon as we can.</p>
+<div class="page">
+  <a class="back-link" href="index.html">&larr; Back</a>
 
-<h2>Common Questions</h2>
+  <div class="masthead">
+    <p class="eyebrow">Help</p>
+    <h1 class="title">Wingman Support</h1>
+    <div class="meta-row">
+      <span>Need help with Wingman? Email <a class="inline-link" href="mailto:riderview1901@gmail.com">riderview1901@gmail.com</a> and we'll get back to you as soon as we can.</span>
+    </div>
+  </div>
 
-<p class="q">How do I join a Circle?</p>
-<p>You'll need an invite code or QR code from your organization's admin.</p>
+  <h2 class="section-title" style="border-bottom:none; padding-bottom:0;">Common Questions</h2>
 
-<p class="q">I can't request a ride.</p>
-<p>Make sure you've selected a party size before tapping Request.</p>
+  <div class="faq-card">
+    <p class="faq-q">How do I join a Circle?</p>
+    <p class="faq-a">You'll need an invite code or QR code from your organization's admin.</p>
+  </div>
 
-<p class="q">How do I report a safety concern?</p>
-<p>Use the SOS button during an active ride, or contact your organization's admin directly.</p>
+  <div class="faq-card">
+    <p class="faq-q">I can't request a ride.</p>
+    <p class="faq-a">Make sure you've selected a party size before tapping Request. If your Circle has no drivers of its own, you may need to switch into a connected Circle first &mdash; check Account for a "Switch to a Connected Circle" option.</p>
+  </div>
 
-<p class="q">How do I delete my account?</p>
-<p>Go to Account → Delete Account. This permanently removes your account and cannot be undone.</p>
+  <div class="faq-card">
+    <p class="faq-q">How do I report a safety concern?</p>
+    <p class="faq-a">Use the SOS button during an active ride, or contact your organization's admin directly.</p>
+  </div>
+
+  <div class="faq-card">
+    <p class="faq-q">How do I delete my account?</p>
+    <p class="faq-a">Go to Account &rarr; Delete Account. This permanently removes your account and cannot be undone.</p>
+  </div>
+
+  <div class="faq-card">
+    <p class="faq-q">How does my Circle's subscription work?</p>
+    <p class="faq-a">Your Circle's admin pays a flat fee once per semester through the app, handled securely by Stripe. Subscriptions don't auto-renew, and only an admin can manage billing &mdash; regular members are never charged.</p>
+  </div>
+
+  <footer class="doc-footer">
+    Wingman Support
+  </footer>
+</div>
 </body>
 </html>

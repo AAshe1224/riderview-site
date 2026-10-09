@@ -4,161 +4,199 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wingman — Privacy Policy</title>
-<style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 40px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.65; }
-h1 { font-size: 26px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
-h2 { font-size: 19px; margin-top: 32px; }
-a { color: #2563eb; }
-blockquote { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px 20px; margin: 20px 0; border-radius: 4px; font-size: 14px; }
-.back { display: inline-block; margin-bottom: 24px; }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="back" href="index.html">← Back</a>
-<h1>Wingman Privacy Policy</h1>
-<p><strong>Last updated: August 31, 2026</strong></p>
-<blockquote>
-<p><strong>Note on this document:</strong> This is a working draft based on Wingman's actual
-features and data practices as of this writing. It is meant to get you to a
-submission-ready, accurate policy quickly — it is <strong>not</strong> a substitute for
-review by a licensed attorney, and should be reviewed by one before Wingman
-is rolled out broadly beyond a closed test group. Replace all bracketed
-placeholders before publishing.</p>
-</blockquote>
-<h2>1. Who We Are</h2>
-<p>Wingman ("we," "us," "the app") is a peer coordination platform that helps
-members of private organizations (Greek life chapters and similar groups,
-referred to in the app as "Circles") organize volunteer sober rides among
-their own members. Wingman is not a licensed transportation company, does
-not employ drivers, and does not provide transportation services itself — it
-is a coordination tool used by members of an organization to arrange rides
-among themselves.</p>
-<p>Contact: austin.ashe@icloud.com</p>
-<h2>2. Information We Collect</h2>
-<h3>Account Information</h3>
-<ul>
-<li>Email address and password (used for authentication)</li>
-<li>Username / display name</li>
-<li>Phone number (optional)</li>
-<li>Profile details you provide, including vehicle information if you register
-  as a driver (make, model, year, color, seat capacity)</li>
-</ul>
-<h3>Location Information</h3>
-<ul>
-<li><strong>Precise location</strong> when you request a ride, submitted as your pickup
-  point</li>
-<li><strong>Live location</strong> while you are actively driving a ride, shared with the
-  rider(s) you are transporting and your group's admins</li>
-<li><strong>Background location</strong>, used specifically so a driver's location keeps
-  updating for riders and admins while the app is not in the foreground
-  during an active ride</li>
-<li><strong>Location included in an SOS alert</strong>, if location services are available
-  at the moment you trigger one (see Section 6)</li>
-</ul>
-<h3>Ride and Group Information</h3>
-<ul>
-<li>Ride requests, including pickup and destination addresses, timestamps,
-  party size, and ride status</li>
-<li>Messages sent between drivers and riders within a ride</li>
-<li>Your membership, role, and admin status within any Circle or sub-group you
-  join</li>
-<li>Ride history associated with your account</li>
-</ul>
-<h3>Device and Usage Information</h3>
-<ul>
-<li>Push notification tokens, used to deliver ride updates, safety alerts, and
-  group announcements even when the app is not open</li>
-<li>Crash and diagnostic data, used to identify and fix bugs</li>
-<li>Camera access, used only to scan QR invite codes — Wingman does not
-  store photos or video from your camera</li>
-</ul>
-<h3>Information From Others</h3>
-<ul>
-<li>If a member of your Circle shares an invite code or QR code with you, the
-  code itself may contain a reference to the Circle or role you are joining</li>
-</ul>
-<h2>3. How We Use Your Information</h2>
-<p>We use the information above to:
-- Operate the ride coordination features of the app (matching riders and
-  drivers, tracking ride status, showing live location during active rides)
-- Send push notifications for ride updates, safety alerts, shift reminders,
-  and group announcements
-- Allow your Circle's admins to manage membership, review ride activity
-  within their own Circle, and respond to safety events
-- Maintain the security and reliability of the app, including diagnosing
-  crashes and abuse
-- Enforce our Terms of Service</p>
-<p>We do not sell your personal information, and we do not use your data for
-third-party advertising.</p>
-<h2>4. Who Can See Your Information</h2>
-<p>Because Wingman is built around private organizational groups, some of
-your information is visible to other people within your own Circle — this is
-a core part of how the app works, not a third-party data share:</p>
-<ul>
-<li><strong>Your Circle's admins</strong> can see your membership status, ride history
-  within that Circle, and any safety/security events (including SOS alerts)
-  you're involved in.</li>
-<li><strong>Drivers you're matched with</strong> can see your pickup/destination and party
-  size for that ride.</li>
-<li><strong>Riders you're driving</strong> can see your live location, vehicle information,
-  and name during an active ride.</li>
-<li><strong>A Guest Admin (sub-group chair)</strong>, if your organization uses this
-  feature, can see membership and roster information for the specific
-  sub-group they manage.</li>
-</ul>
-<h2>5. Third-Party Services</h2>
-<p>Wingman relies on the following third-party services to operate. Each
-processes a limited set of data necessary for its function:</p>
-<ul>
-<li><strong>Supabase</strong> — our backend database and authentication provider. Stores
-  account, ride, and group data.</li>
-<li><strong>Firebase (Google)</strong> — used for push notifications (Firebase Cloud
-  Messaging) and crash reporting (Crashlytics).</li>
-<li><strong>Mapbox</strong> — used for address search and geocoding when you enter a
-  pickup or destination.</li>
-<li><strong>OpenRouteService</strong> — used for calculating driving routes.</li>
-</ul>
-<p>These providers may process data outside your local jurisdiction. We only
-share the data each service needs to perform its specific function.</p>
-<h2>6. Safety Features (SOS)</h2>
-<p>Wingman includes an SOS feature that lets you alert your Circle's admins
-during an active ride. When triggered, it sends your location (if available)
-and ride details to your Circle's admins.</p>
-<p><strong>Wingman's SOS feature is not connected to 911 or any official emergency
-response service, and does not replace calling 911.</strong> In a genuine emergency,
-always contact local emergency services directly.</p>
-<h2>7. Data Retention</h2>
-<p>When you delete your account, we immediately revoke your login access and
-remove your active driver and group membership records. Your ride history
-is retained after account deletion, since it forms part of the ride record
-for other members involved in those rides (drivers, co-riders) and your
-Circle's own safety records.</p>
-<p>If you have ever sent an SOS alert, certain account fields (name, phone
-number, vehicle details) may be retained in an anonymized or restricted
-form rather than fully deleted, so that safety and security records
-connected to that alert remain intact and reviewable. Your login access is
-still fully and immediately revoked in this case — you will not be able to
-sign back in.</p>
-<p>We do not currently offer a way to request removal of historical ride
-records tied to other users' ride history. If you have questions about
-your specific data, contact us at austin.ashe@icloud.com.</p>
-<h2>8. Your Choices</h2>
-<ul>
-<li>You can leave any Circle at any time from the Account screen.</li>
-<li>You can permanently delete your account and its associated data at any time from Account &rarr; Delete Account within the app.</li>
-<li>You can disable location or notification permissions at any time in your
-  device settings, though this will limit core functionality (ride
-  matching, live tracking, and safety alerts will not work correctly
-  without location access).</li>
-</ul>
-<h2>9. Children's Privacy</h2>
-<p>Wingman is intended for use by members of college and university
-organizations and is not directed at children under 13. We do not knowingly
-collect information from children under 13.</p>
-<h2>10. Changes to This Policy</h2>
-<p>We may update this policy from time to time. We'll update the "Last updated"
-date above when we do. Material changes will be communicated in-app.</p>
-<h2>11. Contact Us</h2>
-<p>Questions about this policy or your data can be sent to austin.ashe@icloud.com.</p>
+<div class="page">
+  <a class="back-link" href="index.html">&larr; Back</a>
+
+  <div class="masthead">
+    <p class="eyebrow">Legal &middot; Privacy</p>
+    <h1 class="title">Wingman Privacy Policy</h1>
+    <div class="meta-row">
+      <span class="updated-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Last updated October 9, 2026
+      </span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>Note on this document:</strong> this is a working draft based on Wingman's actual features and data practices as of the date above. It's meant to get to a submission-ready, accurate policy quickly &mdash; it is <strong>not</strong> a substitute for review by a licensed attorney, and should be reviewed by one before Wingman is rolled out broadly beyond a closed test group. Replace all bracketed placeholders before publishing.
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#who-we-are"><span class="n">1</span> Who We Are</a></li>
+      <li><a href="#information-we-collect"><span class="n">2</span> Information We Collect</a></li>
+      <li><a href="#how-we-use"><span class="n">3</span> How We Use Your Information</a></li>
+      <li><a href="#who-can-see"><span class="n">4</span> Who Can See Your Information</a></li>
+      <li><a href="#third-party"><span class="n">5</span> Third-Party Services</a></li>
+      <li><a href="#sos"><span class="n">6</span> Safety Features (SOS)</a></li>
+      <li><a href="#retention"><span class="n">7</span> Data Retention</a></li>
+      <li><a href="#choices"><span class="n">8</span> Your Choices</a></li>
+      <li><a href="#children"><span class="n">9</span> Children's Privacy</a></li>
+      <li><a href="#changes"><span class="n">10</span> Changes to This Policy</a></li>
+      <li><a href="#contact"><span class="n">11</span> Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <section class="doc-section" id="who-we-are">
+    <h2 class="section-title"><span class="num">01</span> Who We Are</h2>
+    <p>Wingman ("we," "us," "the app") is a peer coordination platform that helps members of private organizations (Greek life chapters and similar groups, referred to in the app as "Circles") organize volunteer sober rides among their own members. Wingman is not a licensed transportation company, does not employ drivers, and does not provide transportation services itself &mdash; it is a coordination tool used by members of an organization to arrange rides among themselves.</p>
+    <p>Contact: austin.ashe@icloud.com</p>
+  </section>
+
+  <section class="doc-section" id="information-we-collect">
+    <h2 class="section-title"><span class="num">02</span> Information We Collect</h2>
+
+    <h3 class="sub-title">Account Information</h3>
+    <ul>
+      <li>Email address and password (used for authentication)</li>
+      <li>Username / display name and, optionally, phone number</li>
+      <li>Profile details you provide, including vehicle information if you register as a driver (make, model, year, color, seat capacity)</li>
+      <li>Your notification preferences (e.g., whether you've muted chat or trip-sharing push notifications &mdash; see Section 6 for what can never be muted)</li>
+    </ul>
+
+    <h3 class="sub-title">Location Information</h3>
+    <ul>
+      <li><strong>Precise location</strong> when you request a ride, submitted as your pickup point</li>
+      <li><strong>Live location</strong> while you are actively driving a ride, shared with the rider(s) you are transporting and your group's admins</li>
+      <li><strong>Background location</strong>, used specifically so a driver's location keeps updating for riders and admins while the app is not in the foreground during an active ride</li>
+      <li><strong>Location included in an SOS alert</strong>, if location services are available at the moment you trigger one (see Section 6)</li>
+    </ul>
+
+    <h3 class="sub-title">Ride and Group Information</h3>
+    <ul>
+      <li>Ride requests, including pickup and destination addresses, timestamps, party size, and ride status</li>
+      <li>Messages sent between drivers and riders within a ride</li>
+      <li>Your membership, role, and admin status within any Circle or sub-group you join</li>
+      <li>Ride history associated with your account</li>
+      <li>If you drive: the shifts you've claimed or offered to swap, and any dates you've marked yourself unavailable (visible to your Circle's admins when assigning shifts)</li>
+      <li>"Thanks" sent to a driver after a ride, and whether a rider has marked a driver as a favorite &mdash; both are one-directional appreciation signals, never a rating or score, and never affect anyone's ability to request or give rides</li>
+    </ul>
+
+    <h3 class="sub-title">Payment Information (Circle Admins Only)</h3>
+    <p>If you're an admin renewing your Circle's semester subscription, payment is handled entirely by Stripe, our payment processor. <strong>Wingman never receives or stores your card number</strong> &mdash; you enter it directly on a Stripe-hosted checkout page. We store only a Stripe-issued customer reference ID (so a returning admin can reuse a saved card) and your Circle's subscription expiration date. Regular members never enter payment information; billing is a Circle-level action taken by an admin, not a per-person charge.</p>
+
+    <h3 class="sub-title">Device and Usage Information</h3>
+    <ul>
+      <li>Push notification tokens, used to deliver ride updates, safety alerts, and group announcements even when the app is not open</li>
+      <li>Crash and diagnostic data, used to identify and fix bugs</li>
+      <li>Camera access, used only to scan QR invite codes &mdash; Wingman does not store photos or video from your camera</li>
+    </ul>
+
+    <h3 class="sub-title">Information From Others</h3>
+    <ul>
+      <li>If a member of your Circle shares an invite code or QR code with you, the code itself may contain a reference to the Circle or role you are joining</li>
+      <li>If another rider selects you as a <strong>Trusted Contact</strong>, we store that relationship so we know to notify you when their rides begin (see Section 4)</li>
+    </ul>
+  </section>
+
+  <section class="doc-section" id="how-we-use">
+    <h2 class="section-title"><span class="num">03</span> How We Use Your Information</h2>
+    <p>We use the information above to:</p>
+    <ul>
+      <li>Operate the ride coordination features of the app (matching riders and drivers, tracking ride status, showing live location during active rides)</li>
+      <li>Send push notifications for ride updates, safety alerts, shift reminders, and group announcements</li>
+      <li>Allow your Circle's admins to manage membership, review ride activity within their own Circle, and respond to safety events</li>
+      <li>Generate automated summaries for admins from your Circle's own existing ride and shift data (for example, a nightly recap of rides completed or a flag when a claimed shift has no driver online) &mdash; these are computed from data already described above, not a new category of information collected about you</li>
+      <li>Process your Circle's semester subscription payment through Stripe, if you're an admin renewing access</li>
+      <li>Maintain the security and reliability of the app, including diagnosing crashes and abuse</li>
+      <li>Enforce our Terms of Service</li>
+    </ul>
+    <p>We do not sell your personal information, and we do not use your data for third-party advertising.</p>
+  </section>
+
+  <section class="doc-section" id="who-can-see">
+    <h2 class="section-title"><span class="num">04</span> Who Can See Your Information</h2>
+    <p>Because Wingman is built around private organizational groups, some of your information is visible to other people within your own Circle &mdash; this is a core part of how the app works, not a third-party data share:</p>
+    <ul>
+      <li><strong>Your Circle's admins</strong> can see your membership status, ride history within that Circle, and any safety/security events (including SOS alerts) you're involved in.</li>
+      <li><strong>Drivers you're matched with</strong> can see your pickup/destination and party size for that ride.</li>
+      <li><strong>Riders you're driving</strong> can see your live location, vehicle information, and name during an active ride.</li>
+      <li><strong>A Guest Admin (sub-group chair)</strong>, if your organization uses this feature, can see membership and roster information for the specific sub-group they manage.</li>
+      <li><strong>A connected Circle's admins.</strong> If your Circle (for example, a sorority with no drivers of its own) connects to another Circle's driver pool, a ride you request through that connection is visible to that other Circle's admins the same way it would be to your own.</li>
+    </ul>
+
+    <h3 class="sub-title">Trip Sharing &mdash; visible outside the app</h3>
+    <p>During an active ride, you can generate a <strong>Trip Share link</strong> and send it to anyone, even someone who doesn't use Wingman. Trusted Contacts you've selected in advance receive this link automatically the moment a ride is accepted, so you don't have to remember to send it yourself. Anyone with the link can view it without logging in. We deliberately limit what that page shows:</p>
+    <div class="table-wrap">
+      <table class="exposure">
+        <thead><tr><th>Shown on the public link</th><th>Never shown</th></tr></thead>
+        <tbody>
+          <tr><td class="yes">Rider and driver first names</td><td class="no">Full names</td></tr>
+          <tr><td class="yes">Vehicle color, make, and model</td><td class="no">Exact pickup/destination address</td></tr>
+          <tr><td class="yes">Plain-language ride status (e.g. "en route")</td><td class="no">Live GPS location</td></tr>
+          <tr><td></td><td class="no">Phone numbers or the ride PIN</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>You can revoke a Trip Share link at any time from within the app, which immediately stops it from showing any further status.</p>
+
+    <h3 class="sub-title">Lost item follow-up</h3>
+    <p>If you report an item left behind in a driver's car, the app opens a text message addressed directly to that driver's real phone number through your own device's messaging app. That message &mdash; and anything either of you send after it &mdash; is a normal text conversation between your two phones, not something Wingman stores, sees, or controls.</p>
+  </section>
+
+  <section class="doc-section" id="third-party">
+    <h2 class="section-title"><span class="num">05</span> Third-Party Services</h2>
+    <p>Wingman relies on the following third-party services to operate. Each processes a limited set of data necessary for its function:</p>
+    <ul>
+      <li><strong>Supabase</strong> &mdash; our backend database and authentication provider. Stores account, ride, and group data.</li>
+      <li><strong>Firebase (Google)</strong> &mdash; used for push notifications (Firebase Cloud Messaging) and crash reporting (Crashlytics).</li>
+      <li><strong>Mapbox</strong> &mdash; used for address search and geocoding when you enter a pickup or destination.</li>
+      <li><strong>OpenRouteService</strong> &mdash; used for calculating driving routes and estimated trip time.</li>
+      <li><strong>Stripe</strong> &mdash; our payment processor for Circle subscription billing. Stripe collects and stores payment card details directly under its own PCI-DSS compliance program; Wingman never receives your full card number.</li>
+    </ul>
+    <p>These providers may process data outside your local jurisdiction. We only share the data each service needs to perform its specific function.</p>
+  </section>
+
+  <section class="doc-section" id="sos">
+    <h2 class="section-title"><span class="num">06</span> Safety Features (SOS)</h2>
+    <p>Wingman includes an SOS feature that lets you alert your Circle's admins during an active ride. When triggered, it sends your location (if available) and ride details to your Circle's admins.</p>
+    <div class="callout safety">
+      <p><strong>Wingman's SOS feature is not connected to 911 or any official emergency response service, and does not replace calling 911.</strong> In a genuine emergency, always contact local emergency services directly.</p>
+    </div>
+    <p>SOS alerts, and the notification an admin receives for one, can never be muted or disabled by anyone, under any notification setting in the app.</p>
+  </section>
+
+  <section class="doc-section" id="retention">
+    <h2 class="section-title"><span class="num">07</span> Data Retention</h2>
+    <p>When you delete your account, we immediately revoke your login access and remove your active driver and group membership records. Your ride history is retained after account deletion, since it forms part of the ride record for other members involved in those rides (drivers, co-riders) and your Circle's own safety records.</p>
+    <p>If you have ever sent an SOS alert, certain account fields (name, phone number, vehicle details) may be retained in an anonymized or restricted form rather than fully deleted, so that safety and security records connected to that alert remain intact and reviewable. Your login access is still fully and immediately revoked in this case &mdash; you will not be able to sign back in.</p>
+    <p>We do not currently offer a way to request removal of historical ride records tied to other users' ride history. If you have questions about your specific data, contact us at austin.ashe@icloud.com.</p>
+  </section>
+
+  <section class="doc-section" id="choices">
+    <h2 class="section-title"><span class="num">08</span> Your Choices</h2>
+    <ul>
+      <li>You can leave any Circle at any time from the Account screen.</li>
+      <li>You can permanently delete your account and its associated data at any time from Account &rarr; Delete Account within the app.</li>
+      <li>You can mute non-safety push notifications (chat messages, trip-share alerts) from Account &rarr; Notification Preferences. Safety-critical alerts, described in Section 6, are never affected by this setting.</li>
+      <li>You can add, remove, or stop being a Trusted Contact, and revoke a Trip Share link, at any time from within the app.</li>
+      <li>You can disable location or notification permissions at any time in your device settings, though this will limit core functionality (ride matching, live tracking, and safety alerts will not work correctly without location access).</li>
+    </ul>
+  </section>
+
+  <section class="doc-section" id="children">
+    <h2 class="section-title"><span class="num">09</span> Children's Privacy</h2>
+    <p>Wingman is intended for use by members of college and university organizations and is not directed at children under 13. We do not knowingly collect information from children under 13.</p>
+  </section>
+
+  <section class="doc-section" id="changes">
+    <h2 class="section-title"><span class="num">10</span> Changes to This Policy</h2>
+    <p>We may update this policy from time to time. We'll update the "Last updated" date above when we do. Material changes will be communicated in-app.</p>
+  </section>
+
+  <section class="doc-section" id="contact">
+    <h2 class="section-title"><span class="num">11</span> Contact Us</h2>
+    <p>Questions about this policy or your data can be sent to <a class="inline-link" href="mailto:austin.ashe@icloud.com">austin.ashe@icloud.com</a>.</p>
+  </section>
+
+  <footer class="doc-footer">
+    Wingman Privacy Policy &middot; Last updated October 9, 2026 &middot; Draft for attorney and institutional review, not yet final.
+  </footer>
+</div>
 </body>
 </html>

@@ -4,97 +4,139 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wingman — Terms of Service</title>
-<style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 40px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.65; }
-h1 { font-size: 26px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
-h2 { font-size: 19px; margin-top: 32px; }
-a { color: #2563eb; }
-blockquote { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px 20px; margin: 20px 0; border-radius: 4px; font-size: 14px; }
-.back { display: inline-block; margin-bottom: 24px; }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="back" href="index.html">← Back</a>
-<h1>Wingman Terms of Service</h1>
-<p><strong>Last updated: August 31, 2026</strong></p>
-<blockquote>
-<p><strong>Note on this document:</strong> This is a working draft, not a substitute for
-review by a licensed attorney. It's built to get you to a reasonable
-baseline quickly, using standard disclaimer language common to peer
-coordination and rideshare-adjacent apps. Have this reviewed by an
-attorney before rolling Wingman out beyond a closed test group — and
-replace all bracketed placeholders before publishing.</p>
-</blockquote>
-<h2>1. Acceptance of Terms</h2>
-<p>By creating an account or using Wingman, you agree to these Terms of
-Service and our Privacy Policy. If you do not agree, do not use the app.</p>
-<p>You must affirmatively accept these Terms during account creation before you
-can use Wingman.</p>
-<h2>2. What Wingman Is</h2>
-<p>Wingman is a coordination tool that helps members of a private
-organization (a "Circle") arrange volunteer sober rides among themselves.</p>
-<p><strong>Wingman is not a transportation company, rideshare service, or common
-carrier.</strong> We do not own vehicles, employ drivers, or provide transportation
-services. Drivers using Wingman are volunteer members of your own
-organization, not Wingman employees or contractors. Wingman does not
-conduct driver background checks, vehicle inspections, or license
-verification — any such vetting is the responsibility of your organization,
-not Wingman.</p>
-<h2>3. Eligibility</h2>
-<p>Wingman is intended for use within authorized organizations that have set
-up a Circle and issued you an invite code. You must be at least 18 years
-old to use Wingman. By using the app, you represent that you meet this
-requirement and that you are a legitimate member of the organization whose
-Circle you are joining.</p>
-<h2>4. Your Responsibilities</h2>
-<p>When using Wingman, you agree to:
-- Provide accurate information about yourself and, if applicable, your
-  vehicle
-- Use the app only for its intended purpose of coordinating rides within
-  your own organization
-- Not share your account, invite codes, or Co-Rider codes with anyone
-  outside your organization or with anyone you would not otherwise let into
-  the vehicle
-- Not use Wingman while impaired in a manner that would make you unsafe to
-  drive, if you are acting as a driver
-- Comply with all applicable traffic and vehicle laws while driving</p>
-<h2>5. Safety Disclaimer</h2>
-<p>Wingman's SOS feature is intended to alert your Circle's admins during an
-active ride. <strong>It is not connected to 911 or any emergency dispatch service
-and should never be relied on as your primary means of contacting emergency
-responders.</strong> In any situation involving immediate danger, call 911 (or your
-local emergency number) directly.</p>
-<p>Wingman does not guarantee driver availability, ride completion, response
-time to safety alerts, or the conduct of any user, driver, or rider. You use
-the app, and arrange and accept rides through it, at your own risk.</p>
-<h2>6. Group Admin Responsibilities</h2>
-<p>If you are an admin or Guest Admin within a Circle, you are responsible for
-managing your organization's membership, roles, and any risk-management
-policies your organization requires — Wingman provides the coordination
-tools but does not set or enforce your organization's own safety policies.</p>
-<h2>7. Limitation of Liability</h2>
-<p>To the fullest extent permitted by law, Wingman and its developers are not
-liable for any injury, loss, damage, or claim arising from:
-- Your use of, or inability to use, the app
-- The conduct of any other user, including drivers and riders you are
-  matched with
-- Any ride arranged, accepted, or completed through the app
-- Delays, failures, or inaccuracies in ride matching, location tracking, or
-  safety alerts</p>
-<p>Wingman is provided "as is" without warranties of any kind, express or
-implied.</p>
-<p>[CONSULT AN ATTORNEY ON WHETHER YOU NEED A MORE FORMAL LIMITATION-OF-LIABILITY
-CLAUSE, GIVEN THIS APP'S SAFETY-RELATED USE CASE AND YOUR STATE'S LAWS.]</p>
-<h2>8. Account Termination</h2>
-<p>We may suspend or terminate your access to Wingman if you violate these
-Terms, misuse the app, or if your organization removes you from its Circle.
-You may delete your account at any time as described in our Privacy Policy.</p>
-<h2>9. Changes to These Terms</h2>
-<p>We may update these Terms from time to time. Continued use of the app after
-changes take effect constitutes acceptance of the updated Terms.</p>
-<h2>10. Governing Law</h2>
-<p>the Commonwealth of Virginia</p>
-<h2>11. Contact Us</h2>
-<p>Questions about these Terms can be sent to austin.ashe@icloud.com.</p>
+<div class="page">
+  <a class="back-link" href="index.html">&larr; Back</a>
+
+  <div class="masthead">
+    <p class="eyebrow">Legal &middot; Terms</p>
+    <h1 class="title">Wingman Terms of Service</h1>
+    <div class="meta-row">
+      <span class="updated-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Last updated October 9, 2026
+      </span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>Note on this document:</strong> this is a working draft, not a substitute for review by a licensed attorney. It's built to get you to a reasonable baseline quickly, using standard disclaimer language common to peer coordination and rideshare-adjacent apps. Have this reviewed by an attorney before rolling Wingman out beyond a closed test group &mdash; and replace all bracketed placeholders before publishing.
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#acceptance"><span class="n">1</span> Acceptance of Terms</a></li>
+      <li><a href="#what-it-is"><span class="n">2</span> What Wingman Is</a></li>
+      <li><a href="#eligibility"><span class="n">3</span> Eligibility</a></li>
+      <li><a href="#responsibilities"><span class="n">4</span> Your Responsibilities</a></li>
+      <li><a href="#billing"><span class="n">5</span> Billing and Subscriptions</a></li>
+      <li><a href="#safety"><span class="n">6</span> Safety Disclaimer</a></li>
+      <li><a href="#admin-responsibilities"><span class="n">7</span> Group Admin Responsibilities</a></li>
+      <li><a href="#liability"><span class="n">8</span> Limitation of Liability</a></li>
+      <li><a href="#termination"><span class="n">9</span> Account Termination</a></li>
+      <li><a href="#changes"><span class="n">10</span> Changes to These Terms</a></li>
+      <li><a href="#governing-law"><span class="n">11</span> Governing Law</a></li>
+      <li><a href="#contact"><span class="n">12</span> Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <section class="doc-section" id="acceptance">
+    <h2 class="section-title"><span class="num">01</span> Acceptance of Terms</h2>
+    <p>By creating an account or using Wingman, you agree to these Terms of Service and our Privacy Policy. If you do not agree, do not use the app.</p>
+    <p>You must affirmatively accept these Terms during account creation before you can use Wingman.</p>
+  </section>
+
+  <section class="doc-section" id="what-it-is">
+    <h2 class="section-title"><span class="num">02</span> What Wingman Is</h2>
+    <p>Wingman is a coordination tool that helps members of a private organization (a "Circle") arrange volunteer sober rides among themselves.</p>
+    <p><strong>Wingman is not a transportation company, rideshare service, or common carrier.</strong> We do not own vehicles, employ drivers, or provide transportation services. Drivers using Wingman are volunteer members of your own organization, not Wingman employees or contractors. Wingman does not conduct driver background checks, vehicle inspections, or license verification &mdash; any such vetting is the responsibility of your organization, not Wingman.</p>
+  </section>
+
+  <section class="doc-section" id="eligibility">
+    <h2 class="section-title"><span class="num">03</span> Eligibility</h2>
+    <p>Wingman is intended for use within authorized organizations that have set up a Circle and issued you an invite code. You must be at least 18 years old to use Wingman. By using the app, you represent that you meet this requirement and that you are a legitimate member of the organization whose Circle you are joining.</p>
+  </section>
+
+  <section class="doc-section" id="responsibilities">
+    <h2 class="section-title"><span class="num">04</span> Your Responsibilities</h2>
+    <p>When using Wingman, you agree to:</p>
+    <ul>
+      <li>Provide accurate information about yourself and, if applicable, your vehicle</li>
+      <li>Use the app only for its intended purpose of coordinating rides within your own organization</li>
+      <li>Not share your account, invite codes, or Co-Rider codes with anyone outside your organization or with anyone you would not otherwise let into the vehicle</li>
+      <li>Not use Wingman while impaired in a manner that would make you unsafe to drive, if you are acting as a driver</li>
+      <li>Comply with all applicable traffic and vehicle laws while driving</li>
+    </ul>
+  </section>
+
+  <section class="doc-section" id="billing">
+    <h2 class="section-title"><span class="num">05</span> Billing and Subscriptions</h2>
+    <p>Full access to Wingman's features is provided to a Circle through a semester subscription, paid once per semester by that Circle's admin. Payments are processed by Stripe, our third-party payment processor, under Stripe's own terms of service &mdash; Wingman never receives or stores your card number (see our Privacy Policy, Section 2).</p>
+    <ul>
+      <li>Subscriptions are billed per Circle, not per individual member. Regular members are never charged directly.</li>
+      <li>Subscriptions do not auto-renew. A Circle's admin must manually renew access each semester; access ends if it isn't renewed.</li>
+      <li>New Circles receive a trial period when first created. An admin may also be issued a trial code that extends that period.</li>
+    </ul>
+    <div class="callout money">
+      <p>[CONSULT AN ATTORNEY ON YOUR REFUND POLICY BEFORE PUBLISHING &mdash; THIS DRAFT DOES NOT YET STATE ONE.]</p>
+    </div>
+  </section>
+
+  <section class="doc-section" id="safety">
+    <h2 class="section-title"><span class="num">06</span> Safety Disclaimer</h2>
+    <p>Wingman's SOS feature is intended to alert your Circle's admins during an active ride.</p>
+    <div class="callout safety">
+      <p><strong>It is not connected to 911 or any emergency dispatch service and should never be relied on as your primary means of contacting emergency responders.</strong> In any situation involving immediate danger, call 911 (or your local emergency number) directly.</p>
+    </div>
+    <p>Wingman does not guarantee driver availability, ride completion, response time to safety alerts, or the conduct of any user, driver, or rider. You use the app, and arrange and accept rides through it, at your own risk.</p>
+  </section>
+
+  <section class="doc-section" id="admin-responsibilities">
+    <h2 class="section-title"><span class="num">07</span> Group Admin Responsibilities</h2>
+    <p>If you are an admin or Guest Admin within a Circle, you are responsible for managing your organization's membership, roles, and any risk-management policies your organization requires &mdash; Wingman provides the coordination tools but does not set or enforce your organization's own safety policies.</p>
+  </section>
+
+  <section class="doc-section" id="liability">
+    <h2 class="section-title"><span class="num">08</span> Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Wingman and its developers are not liable for any injury, loss, damage, or claim arising from:</p>
+    <ul>
+      <li>Your use of, or inability to use, the app</li>
+      <li>The conduct of any other user, including drivers and riders you are matched with</li>
+      <li>Any ride arranged, accepted, or completed through the app</li>
+      <li>Delays, failures, or inaccuracies in ride matching, location tracking, or safety alerts</li>
+    </ul>
+    <p>Wingman is provided "as is" without warranties of any kind, express or implied.</p>
+    <div class="callout money">
+      <p>[CONSULT AN ATTORNEY ON WHETHER YOU NEED A MORE FORMAL LIMITATION-OF-LIABILITY CLAUSE, GIVEN THIS APP'S SAFETY-RELATED USE CASE AND YOUR STATE'S LAWS.]</p>
+    </div>
+  </section>
+
+  <section class="doc-section" id="termination">
+    <h2 class="section-title"><span class="num">09</span> Account Termination</h2>
+    <p>We may suspend or terminate your access to Wingman if you violate these Terms, misuse the app, or if your organization removes you from its Circle. You may delete your account at any time as described in our Privacy Policy.</p>
+  </section>
+
+  <section class="doc-section" id="changes">
+    <h2 class="section-title"><span class="num">10</span> Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. Continued use of the app after changes take effect constitutes acceptance of the updated Terms.</p>
+  </section>
+
+  <section class="doc-section" id="governing-law">
+    <h2 class="section-title"><span class="num">11</span> Governing Law</h2>
+    <p>The Commonwealth of Virginia.</p>
+  </section>
+
+  <section class="doc-section" id="contact">
+    <h2 class="section-title"><span class="num">12</span> Contact Us</h2>
+    <p>Questions about these Terms can be sent to <a class="inline-link" href="mailto:austin.ashe@icloud.com">austin.ashe@icloud.com</a>.</p>
+  </section>
+
+  <footer class="doc-footer">
+    Wingman Terms of Service &middot; Last updated October 9, 2026 &middot; Draft for attorney and institutional review, not yet final.
+  </footer>
+</div>
 </body>
 </html>

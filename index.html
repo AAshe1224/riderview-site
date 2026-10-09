@@ -4,22 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wingman</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 700px; margin: 60px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.6; }
-  h1 { font-size: 28px; }
-  a { color: #B8863F; text-decoration: none; font-weight: 600; }
-  a:hover { text-decoration: underline; }
-  .links { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
-  .card { padding: 16px 20px; border: 1px solid #e5e5e5; border-radius: 12px; }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Wingman</h1>
-  <p>Coordinate safe, sober rides within your organization.</p>
-  <div class="links">
-    <div class="card"><a href="privacy.html">Privacy Policy</a></div>
-    <div class="card"><a href="terms.html">Terms of Service</a></div>
-    <div class="card"><a href="support.html">Support</a></div>
+<div class="page">
+  <div class="masthead">
+    <p class="eyebrow">Wingman</p>
+    <h1 class="title">Wingman</h1>
+    <div class="meta-row">
+      <span>Coordinate safe, sober rides within your organization.</span>
+    </div>
   </div>
+
+  <div class="link-grid">
+    <a class="link-card" href="privacy.html"><span class="label">Privacy Policy</span><span class="arrow">&rarr;</span></a>
+    <a class="link-card" href="terms.html"><span class="label">Terms of Service</span><span class="arrow">&rarr;</span></a>
+    <a class="link-card" href="support.html"><span class="label">Support</span><span class="arrow">&rarr;</span></a>
+  </div>
+</div>
 </body>
 </html>
