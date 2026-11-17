@@ -3,87 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wingman Trip Status</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Wingman Ride Status</title>
 <style>
-  body { margin: 0; min-height: 100vh; background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; }
-  .status-card { max-width: 420px; width: 100%; text-align: center; }
-  .icon { font-size: 56px; margin-bottom: 16px; }
-  h1 { font-size: 24px; margin: 0 0 8px; }
-  .subtext { color: #999; font-size: 15px; margin: 0 0 24px; }
-  .driver-info { background: #1A1512; border-radius: 14px; padding: 16px; margin-top: 16px; }
-  .driver-info p { margin: 0; font-size: 15px; }
-  .driver-info strong { color: #CFA054; }
-  .footer-note { margin-top: 32px; color: #555; font-size: 12px; }
+  /* Fonts are hosted here, not loaded from Google, so opening this link
+     doesn't tell a third party who is looking. */
+  @font-face { font-family: "Cinzel"; font-weight: 700; font-display: swap; src: url("fonts/cinzel-700-latin.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 400 700; font-display: swap; src: url("fonts/inter-latin.woff2") format("woff2"); }
+
+  :root { --gold: #CFA054; --gold-light: #F6D385; --card: #1A1512; --muted: #9a9a9a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: #000; color: #fff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 32px 16px;
+  }
+  .wordmark { font-family: "Cinzel", Georgia, serif; font-weight: 700; color: var(--gold); letter-spacing: 0.18em; font-size: 22px; margin: 0 0 28px; }
+  .card { width: 100%; max-width: 420px; background: var(--card); border: 1px solid rgba(207, 160, 84, 0.25); border-radius: 20px; padding: 32px 24px; text-align: center; }
+  .icon { font-size: 52px; line-height: 1; margin-bottom: 16px; }
+  h1 { font-size: 24px; font-weight: 700; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .eta { color: var(--gold-light); font-size: 18px; font-weight: 600; margin: 0 0 6px; }
+  .vehicle { color: var(--muted); font-size: 15px; margin: 6px 0 0; }
+  .about { max-width: 420px; color: var(--muted); font-size: 13px; line-height: 1.5; text-align: center; margin: 24px 0 0; }
+  .hidden { display: none; }
 </style>
 </head>
 <body>
-  <div class="status-card">
-    <div class="icon" id="status-icon">🚗</div>
-    <h1 id="status-text">Loading&hellip;</h1>
-    <p class="subtext" id="rider-line">Ride in progress</p>
-    <div class="driver-info" id="driver-info" style="display:none">
-      <p><strong id="driver-name"></strong> is driving<span id="vehicle-wrap"></span></p>
-    </div>
-  </div>
-  <p class="footer-note" id="footer-note">Powered by Wingman &mdash; no personal details shared beyond ride status.</p>
+  <p class="wordmark">WINGMAN</p>
+
+  <main class="card" aria-live="polite">
+    <div class="icon" id="icon" aria-hidden="true">&#8987;</div>
+    <h1 id="headline">Checking the ride&hellip;</h1>
+    <p class="eta hidden" id="eta"></p>
+    <p class="vehicle hidden" id="vehicle"></p>
+  </main>
+
+  <p class="about" id="about">Wingman is the app student organizations use to get their members home safely with sober volunteer drivers. This page shows only the ride's progress &mdash; no names, addresses or locations.</p>
 
 <script>
-  // Static page (GitHub Pages) instead of server-rendered from Supabase --
-  // Supabase rewrites GET HTML responses to text/plain on its default
-  // domain, which made the original server-rendered version unusable in a
-  // real browser. All data now comes from trip-share-status (JSON, CORS-
-  // enabled) via fetch instead of an initial server render.
-  const STATUS_API = "https://qbelcucfttpsoaywtyse.supabase.co/functions/v1/trip-share-status";
+  // Data comes from trip-share-status, which returns only { status, etaMinutes,
+  // vehicle } for a live link, and an empty {} for anything else (a wrong,
+  // expired or turned-off link, or a ride that ended over an hour ago).
+  const API = "https://qbelcucfttpsoaywtyse.supabase.co/functions/v1/trip-share-status";
+  const TEXT = {
+    pending:   { icon: "⏳", headline: "Waiting for a driver" },
+    accepted:  { icon: "🚗", headline: "A driver is on the way" },
+    arrived:   { icon: "📍", headline: "The driver is outside" },
+    picked_up: { icon: "🚗", headline: "On the way home" },
+    completed: { icon: "✅", headline: "Home safely" },
+    cancelled: { icon: "❌", headline: "This ride was cancelled" },
+  };
+  const FINAL = ["completed", "cancelled"];
+  const el = (id) => document.getElementById(id);
+  let timer = null;
 
-  function getToken() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get("t");
+  function show(id, text) {
+    el(id).textContent = text || "";
+    el(id).classList.toggle("hidden", !text);
   }
 
-  function showError(message) {
-    document.getElementById("status-icon").textContent = "⚠️";
-    document.getElementById("status-text").textContent = "Link not available";
-    document.getElementById("rider-line").textContent = message;
-    document.getElementById("footer-note").style.display = "none";
+  function inactive() {
+    el("icon").textContent = "🔒";
+    el("headline").textContent = "This link isn't active";
+    show("eta", "Links stop working an hour after the ride ends, after 6 hours, or when the rider turns them off.");
+    el("eta").style.color = "var(--muted)";
+    el("eta").style.fontSize = "15px";
+    show("vehicle", "");
+    stop();
   }
 
-  function render(data) {
-    document.getElementById("status-text").textContent = data.statusText;
-    document.getElementById("rider-line").textContent = data.riderName ? data.riderName + "'s ride" : "Ride in progress";
-    const driverInfo = document.getElementById("driver-info");
-    if (data.driverName) {
-      driverInfo.style.display = "";
-      document.getElementById("driver-name").textContent = data.driverName;
-      document.getElementById("vehicle-wrap").textContent = data.vehicle ? (" a " + data.vehicle) : "";
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+  function render(d) {
+    const t = TEXT[d.status];
+    if (!t) return inactive();
+    el("icon").textContent = t.icon;
+    el("headline").textContent = t.headline;
+    const final = FINAL.includes(d.status);
+    show("eta", !final && Number.isInteger(d.etaMinutes)
+      ? (d.etaMinutes <= 1 ? "About a minute away" : "About " + d.etaMinutes + " min")
+      : "");
+    show("vehicle", !final && d.vehicle ? "In a " + d.vehicle.toLowerCase() : "");
+    // Nothing changes after the ride ends, so stop asking.
+    if (final) stop();
+  }
+
+  async function poll(token) {
+    try {
+      const res = await fetch(API + "?t=" + encodeURIComponent(token), { cache: "no-store" });
+      const d = await res.json();
+      if (!d || !d.status) return inactive();
+      render(d);
+    } catch (e) {
+      // A dropped connection: keep the last good state and try again next time.
     }
-    document.getElementById("status-icon").textContent =
-      data.status === "completed" ? "✅" : (data.status === "cancelled" ? "❌" : "🚗");
   }
 
-  const token = getToken();
+  const token = new URLSearchParams(window.location.search).get("t");
   if (!token) {
-    showError("This link is missing its tracking code.");
+    inactive();
   } else {
-    let intervalId;
-    async function poll() {
-      try {
-        const res = await fetch(STATUS_API + "?t=" + encodeURIComponent(token));
-        const data = await res.json();
-        if (!res.ok || data.error) {
-          showError(data.error || "This link is no longer active.");
-          if (intervalId) clearInterval(intervalId);
-          return;
-        }
-        render(data);
-        if (data.status === "completed" || data.status === "cancelled") {
-          if (intervalId) clearInterval(intervalId);
-        }
-      } catch (e) {
-        // silent -- next poll will retry; first load failure is handled below
-      }
-    }
-    poll();
-    intervalId = setInterval(poll, 10000);
+    poll(token);
+    timer = setInterval(() => poll(token), 15000);
   }
 </script>
 </body>

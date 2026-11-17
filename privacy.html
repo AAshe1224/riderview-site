@@ -128,19 +128,19 @@
     </ul>
 
     <h3 class="sub-title">Trip Sharing &mdash; visible outside the app</h3>
-    <p>During an active ride, you can generate a <strong>Trip Share link</strong> and send it to anyone, even someone who doesn't use Wingman. Trusted Contacts who have accepted receive this link automatically the moment a ride is accepted. Anyone with the link can view it without logging in, and it expires after 6 hours. We deliberately limit what that page shows:</p>
+    <p>During an active ride, you can generate a <strong>Trip Share link</strong> and send it to anyone, even someone who doesn't use Wingman, such as a parent. Trusted Contacts who have accepted receive this link automatically the moment a ride is accepted. Anyone with the link can view it without logging in, so it shows only enough to know you got home safely:</p>
     <div class="table-wrap">
       <table class="exposure">
-        <thead><tr><th>Shown on the public link</th><th>Never shown</th></tr></thead>
+        <thead><tr><th>Shown on the link</th><th>Never shown</th></tr></thead>
         <tbody>
-          <tr><td class="yes">Rider and driver first names</td><td class="no">Full names</td></tr>
-          <tr><td class="yes">Vehicle color, make, and model</td><td class="no">Exact pickup/destination address</td></tr>
-          <tr><td class="yes">Plain-language ride status (e.g. "en route")</td><td class="no">Live GPS location</td></tr>
-          <tr><td></td><td class="no">Phone numbers or the ride PIN</td></tr>
+          <tr><td class="yes">Ride status (e.g. "A driver is on the way", "Home safely")</td><td class="no">Your name or the driver's name</td></tr>
+          <tr><td class="yes">Estimated time, as "about N min"</td><td class="no">Pickup or destination address</td></tr>
+          <tr><td class="yes">The car's color and make</td><td class="no">A map, GPS location or coordinates</td></tr>
+          <tr><td></td><td class="no">Phone numbers, the ride PIN, or your Circle's name</td></tr>
         </tbody>
       </table>
     </div>
-    <p>You can revoke a Trip Share link at any time from within the app, which immediately stops it from showing any further status.</p>
+    <p>Each link uses a long random code that can't be guessed or traced back to the ride, and repeated wrong guesses from the same connection are blocked. A link stops working an hour after the ride ends, 6 hours after it was created, or as soon as you turn it off from the active ride screen. A link that isn't working looks the same whatever the reason.</p>
 
     <h3 class="sub-title">Lost item follow-up</h3>
     <p>Within 24 hours after a ride, if you report an item left behind in the driver's car, the app opens a text message addressed directly to that driver's phone number through your own device's messaging app. That message &mdash; and anything either of you send after it &mdash; is a normal text conversation between your two phones, not something Wingman stores, sees, or controls.</p>
@@ -191,7 +191,7 @@
     <h2 class="section-title"><span class="num">08</span> Data Retention</h2>
     <ul>
       <li><strong>Ride details:</strong> 14 days after a ride ends, its pickup and destination addresses, map coordinates, messages, and PINs are permanently erased. A ride connected to an open ride report, or to a Call 911 alert from the last 120 days, is kept until that matter is resolved or that period ends. A ride left open for 14 days is closed automatically.</li>
-      <li><strong>Trip Share links</strong> expire after 6 hours.</li>
+      <li><strong>Trip Share links</strong> stop working an hour after the ride ends, or 6 hours after they were created, whichever comes first, and are deleted the next day.</li>
       <li><strong>Admin action records</strong> are kept for as long as the Circle exists, and for one year after a Circle is deleted (Section 7).</li>
     </ul>
     <p>When you delete your account, we immediately revoke your login access and remove your active driver and group membership records. Your ride history is retained after account deletion, since it forms part of the ride record for other members involved in those rides (drivers, co-riders) and your Circle's own safety records.</p>
