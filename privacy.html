@@ -16,7 +16,7 @@
     <div class="meta-row">
       <span class="updated-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        Last updated November 17, 2026
+        Last updated November 18, 2026
       </span>
     </div>
   </div>
@@ -78,6 +78,7 @@
       <li>"Thanks" sent to a driver after a ride, and whether a rider has marked a driver as a favorite &mdash; both are one-directional appreciation signals, never a rating or score, and never affect anyone's ability to request or give rides</li>
       <li>Ride reports you submit about a ride, and reports others submit about a ride you were part of</li>
       <li>Records of admin actions taken in your Circle, and any review you ask for of a restriction placed on you (see Section 7)</li>
+      <li>When you confirmed you're 18 or older and accepted the Terms at sign-up, and when you accepted the conduct agreement for each role you take on (rider, driver, admin)</li>
     </ul>
 
     <h3 class="sub-title">Payment Information (Circle Admins Only)</h3>
@@ -95,6 +96,7 @@
       <li>If a member of your Circle shares an invite code or QR code with you, the code itself may contain a reference to the Circle or role you are joining</li>
       <li>If another member asks you to be their <strong>Trusted Contact</strong>, we store that request. You become their Trusted Contact only if you accept (see Section 6).</li>
     </ul>
+    <p><strong>Phone numbers you save for "Text my people"</strong> (people outside the app, like a parent) are stored only on your phone. They are never sent to Wingman, and the texts are sent by you, from your own Messages app.</p>
   </section>
 
   <section class="doc-section" id="how-we-use">
@@ -120,7 +122,7 @@
       <li><strong>Other members of your Circle</strong> can see your name &mdash; for example when adding a Trusted Contact or requesting a ride for someone. They cannot see your phone number, vehicle, or other profile details.</li>
       <li><strong>The driver of your ride, and the rider(s) you drive,</strong> can see each other's name, phone number, tier, and the driver's vehicle (including license plate) during the ride and for 24 hours after it ends, so you can reach each other about the ride or a lost item. Riders also see their own driver's exact live location during the ride.</li>
       <li><strong>Your Circle's drivers</strong> can see a waiting ride's pickup, destination, party size, and rider name while it is waiting for a driver. Other members only see their own place in line, never anyone else's ride details.</li>
-      <li><strong>Your Circle's admins</strong> can see your profile and membership details, your ride history within that Circle, ride reports, and safety and security events in their Circle (such as a driver skipping PIN verification).</li>
+      <li><strong>Your Circle's admins</strong> can see your profile and membership details, your ride history within that Circle, ride reports, and safety and security events in their Circle (such as a driver skipping PIN verification). If you use Call 911, they see afterward that it was used and when &mdash; never your location.</li>
       <li><strong>A connected Circle's admins.</strong> If your Circle connects to another Circle's driver pool, that Circle's admins see your first name and Circle during a ride you take through them, and only "Guest rider" afterward. They cannot see your profile.</li>
       <li><strong>A Guest Admin (sub-group chair)</strong>, if your organization uses this feature, can see the roster of the specific sub-group they manage.</li>
       <li><strong>Your Trusted Contacts</strong> &mdash; only people who accepted your request &mdash; receive a Trip Share link when your ride is accepted, and your last known location if you tap Call 911 with that option on.</li>
@@ -163,7 +165,7 @@
     <h2 class="section-title"><span class="num">06</span> Safety Features</h2>
 
     <h3 class="sub-title">Call 911</h3>
-    <p>The Call 911 button opens your phone's dialer to call 911. If you've turned on "Also alert them when I tap Call 911," your accepted Trusted Contacts also receive an alert with your last known location. Your Circle's admins are not notified.</p>
+    <p>The Call 911 button opens your phone's dialer to call 911. If you've turned on "Also alert them when I tap Call 911," your accepted Trusted Contacts also receive an alert with your last known location. Afterward, your Circle's admins see an entry that Call 911 was used and when, without your location and without a push notification. If the ride was through a connected Circle, that Circle's admins see only that a rider from your Circle used it.</p>
     <div class="callout safety">
       <p><strong>Wingman does not contact 911 or any emergency service itself.</strong> The call is placed by your phone, like any other call. In a genuine emergency, always make sure you are connected to emergency services.</p>
     </div>
@@ -175,7 +177,8 @@
     <h3 class="sub-title">Driver fitness, ride reports, and restrictions</h3>
     <ul>
       <li>Drivers confirm they are sober and fit to drive every time they go online, and the app checks in with a driver after several hours online.</li>
-      <li>A rider or driver can report a problem with a ride. Reports go to the Circle's admins; the person reported is not told who reported them.</li>
+      <li>A rider or driver can report a problem with a ride. Reports go to the Circle's admins; the person reported is not told who reported them. A driver who cancels a ride over a safety concern files a report the same way; the rider sees only that the driver cancelled.</li>
+      <li>Riders, drivers, and admins each accept a short conduct agreement when they first take on that role.</li>
       <li>Only an admin can restrict a rider (probation, block, or suspension), and must give a reason, which the rider sees. A restricted rider can ask the admins for a review. Reports and ratings never restrict anyone automatically.</li>
       <li>If a driver skips the rider's PIN check at pickup, the Circle's admins can be alerted and the event is kept in the Circle's security log.</li>
     </ul>
@@ -190,12 +193,13 @@
   <section class="doc-section" id="retention">
     <h2 class="section-title"><span class="num">08</span> Data Retention</h2>
     <ul>
-      <li><strong>Ride details:</strong> 14 days after a ride ends, its pickup and destination addresses, map coordinates, messages, and PINs are permanently erased. A ride connected to an open ride report, or to a Call 911 alert from the last 120 days, is kept until that matter is resolved or that period ends. A ride left open for 14 days is closed automatically.</li>
+      <li><strong>Ride details:</strong> 14 days after a ride ends, its pickup and destination addresses, map coordinates, messages, and PINs are erased from the app, so no one in the app, including admins, can see them. Because a problem is sometimes reported weeks later, a sealed copy of those details is kept for 120 days after the ride, accessible only to Wingman and used only for safety reports or legal requests, then permanently erased. A ride connected to an open ride report stays visible to its Circle's admins until the report is resolved. A ride left open for 14 days is closed automatically.</li>
+      <li><strong>Call 911 records:</strong> the time and last known location of a Call 911 are kept for 120 days, then the location is erased.</li>
       <li><strong>Trip Share links</strong> stop working an hour after the ride ends, or 6 hours after they were created, whichever comes first, and are deleted the next day.</li>
       <li><strong>Admin action records</strong> are kept for as long as the Circle exists, and for one year after a Circle is deleted (Section 7).</li>
     </ul>
     <p>When you delete your account, we immediately revoke your login access and remove your active driver and group membership records. Your ride history is retained after account deletion, since it forms part of the ride record for other members involved in those rides (drivers, co-riders) and your Circle's own safety records.</p>
-    <p>If your account is linked to a safety record that must be kept (such as a past SOS alert), certain account fields (name, phone number, vehicle details) may be retained in an anonymized or restricted form rather than fully deleted, so that the record remains intact and reviewable. Your login access is still fully and immediately revoked in this case &mdash; you will not be able to sign back in.</p>
+    <p>So that deleting an account can't erase evidence of something that happened, Wingman keeps a sealed record of who you were (your name, email, and phone number) for 120 days after you delete your account. It is accessible only to Wingman, not to any Circle or admin, and is used only for safety reports or legal requests. After 120 days it is permanently erased. Your login access is revoked immediately either way &mdash; you will not be able to sign back in.</p>
     <p>If you have questions about your specific data, contact us at austin.ashe@icloud.com.</p>
   </section>
 
@@ -207,6 +211,7 @@
       <li>You can mute non-safety push notifications (chat messages, trip-share alerts) from Account &rarr; Notification Preferences. Safety-critical alerts, described in Section 6, are never affected by this setting.</li>
       <li>You can add or remove Trusted Contacts, accept or decline requests to be one, remove yourself as someone's Trusted Contact, and revoke a Trip Share link, at any time from within the app.</li>
       <li>If you're restricted, you can ask your Circle's admins for a review from the restriction screen.</li>
+      <li>You can add or remove the people you save for "Text my people" at any time. They're stored only on your phone, so deleting the app removes them.</li>
       <li>You can disable location or notification permissions at any time in your device settings, though this will limit core functionality (ride matching, live tracking, and safety alerts will not work correctly without location access).</li>
     </ul>
   </section>
@@ -227,7 +232,7 @@
   </section>
 
   <footer class="doc-footer">
-    Wingman Privacy Policy &middot; Last updated November 17, 2026 &middot; Draft for attorney and institutional review, not yet final.
+    Wingman Privacy Policy &middot; Last updated November 18, 2026 &middot; Draft for attorney and institutional review, not yet final.
   </footer>
 </div>
 </body>
